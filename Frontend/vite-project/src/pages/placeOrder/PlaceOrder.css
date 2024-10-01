@@ -1,0 +1,35 @@
+.place-order {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+   gap: 50px;
+   margin-top: 100px;
+}
+.place-order-left{
+    width: 100%;
+    max-width: max(30%,500px);
+}
+.place-order-left .title{
+    font-size: 30px;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+.place-order-left input{
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline-color: rgb(169, 118, 110);
+}
+.place-order-left .multi-fields{
+    display: flex;
+    gap: 10px;
+}
+.place-order-left .multi-fields input{
+    width: 100%;
+}
+.place-order-right{
+    width: 100%;
+    max-width: max(40%,500px);
+}

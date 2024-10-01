@@ -1,0 +1,277 @@
+/* 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+ 
+  .add {
+    width: 100%;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .add-img-upload,
+  .add-product-name,
+  .add-product-description,
+  .add-category,
+  .add-price {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .add-img-upload p,
+  .add-product-name p,
+  .add-product-description p,
+  .add-category p,
+  .add-price p {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .upload-label {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  .upload-label:hover {
+    border-color: #007bff;
+  }
+  
+  .upload-icon {
+    width: 100px;
+    height: 100px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  select {
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #007bff;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  .add-category-price {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  .add-btn {
+    padding: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add-btn:hover {
+    background-color: #0056b3;
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .add {
+      padding: 1rem;
+    }
+  
+    .add-category-price {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .form-container {
+      gap: 1rem;
+    }
+  
+    .add-btn {
+      font-size: 1rem;
+      padding: 0.8rem;
+    }
+  }
+   */
+   /* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Add Page Wrapper */
+  /* .add-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f7fa;
+    padding: 2rem;
+  } */
+  
+  /* Add Form Container */
+  .add {
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+    margin-left: 25px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+    transition: all 0.3s ease;
+  }
+  
+  /* Smooth Fade-in Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Form Layout */
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  /* Upload Section */
+  .add-img-upload {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: border-color 0.3s;
+  }
+  
+  .add-img-upload p {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .add-img-upload:hover {
+    border-color: #0056b3;
+  }
+  
+  .upload-icon {
+    width: 80px;
+    height: 80px;
+    opacity: 0.7;
+  }
+  
+  .upload-icon:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  /* Input and Textarea Styling */
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  select {
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+    background-color: #f8f9fa;
+    outline: none;
+    transition: border-color 0.3s;
+    width: 100%;
+  }
+  
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #007bff;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  /* Category and Price Section */
+  .add-category-price {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  
+  /* Labels and Titles */
+  .add-product-name p,
+  .add-product-description p,
+  .add-category p,
+  .add-price p {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Button Styling */
+  .add-btn {
+    padding: 10px;
+    background-color:black;
+    color: white;
+    border: none;
+    width: 120px;
+    cursor: pointer;
+    margin-top: 14px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .add-category-price {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .add {
+      padding: 1.5rem;
+    }
+  
+    .add-btn {
+      font-size: 1rem;
+      padding: 0.8rem;
+    }
+  }
+  

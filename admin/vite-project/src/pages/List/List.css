@@ -1,0 +1,182 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .list {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow: hidden;
+  }
+  
+  .list p {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+  }
+  
+  .list-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .list-table-format {
+    display: grid;
+    grid-template-columns: 1.2fr 2fr 1fr 1.5fr 1fr;
+    align-items: center;
+    padding: 15px;
+    background-color: #fafafa;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s;
+  }
+  
+  .list-table-format.title {
+    background-color: #333;
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .list-table-format img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .list-table-format img:hover {
+    transform: scale(1.1);
+  }
+  
+  .list-table-format p {
+    margin: 0;
+    font-size: 16px;
+    color: #444;
+    text-align: center;
+  }
+  
+  .list-table-format p:nth-child(2) {
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .list-table-format p:nth-child(3) {
+    color: #28a745;
+  }
+  
+  .list-table-format p:nth-child(5) {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .list-table-format p:nth-child(5):hover {
+    color: #e63946;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .list-table-format:hover {
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Button and Icon Styling */
+  .list-table-format p svg {
+    font-size: 22px;
+  }
+  
+  .list-table-format.title b {
+    font-size: 18px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .list-table-format {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: 
+        "image name"
+        "category price"
+        "action action";
+      padding: 10px;
+    }
+  
+    .list-table-format img {
+      grid-area: image;
+      margin: 0 auto;
+    }
+  
+    .list-table-format p:nth-child(2) {
+      grid-area: name;
+      font-size: 14px;
+    }
+  
+    .list-table-format p:nth-child(3) {
+      grid-area: price;
+    }
+  
+    .list-table-format p:nth-child(4) {
+      grid-area: category;
+    }
+  
+    .list-table-format p:nth-child(5) {
+      grid-area: action;
+      margin-top: 10px;
+    }
+  
+    .list-table-format.title {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .list {
+      width: 100%;
+      margin: 20px auto;
+      padding: 10px;
+    }
+  
+    .list p {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+  
+    .list-table-format {
+      padding: 8px;
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+        "image"
+        "name"
+        "category"
+        "price"
+        "action";
+      text-align: left;
+    }
+  
+    .list-table-format img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+  
+    .list-table-format p {
+      font-size: 14px;
+    }
+  }
+  
